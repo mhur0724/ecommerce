@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./components/Home";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Announcement from "./components/Announcement";
 import Graphics from "./GraphicsSection/Graphics";
@@ -13,7 +13,7 @@ import { bestSellers } from "./components/data";
 
 function App() {
   return (
-    <Router>
+    <HashRouter basename="/">
       <div className="App">
         <Announcement />
         <Navbar />
@@ -45,7 +45,7 @@ function App() {
         </div>
         <Footer />
       </div>
-    </Router>
+    </HashRouter>
   );
 }
 
