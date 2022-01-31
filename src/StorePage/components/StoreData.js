@@ -32,6 +32,9 @@ export const storeItems = [
     product: "Other Hoodie (Black)",
     price: "$60.00",
     modelImg: "",
+    nav: "/store/otherhoodie-black",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 2,
@@ -39,6 +42,9 @@ export const storeItems = [
     product: "Other Hoodie (Green)",
     price: "$60.00",
     modelImg: "",
+    nav: "/store/otherhoodie-green",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 3,
@@ -46,6 +52,9 @@ export const storeItems = [
     product: "Other Hoodie (Orange)",
     price: "$60.00",
     modelImg: "",
+    nav: "/store/otherhoodie-orange",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 4,
@@ -53,6 +62,9 @@ export const storeItems = [
     product: "Other Hoodie (White)",
     price: "$60.00",
     modelImg: "",
+    nav: "/store/otherhoodie-white",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 5,
@@ -60,6 +72,9 @@ export const storeItems = [
     product: "Popsicle Shirt (White)",
     price: "$35.00",
     modelImg: "",
+    nav: "/store/popsicleshirt-white",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
 
   {
@@ -68,6 +83,9 @@ export const storeItems = [
     product: "Popsicle Shirt (Black)",
     price: "$35.00",
     modelImg: popsicleShirtBlackModel,
+    nav: "/store/popsicleshirt-black",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 7,
@@ -75,6 +93,9 @@ export const storeItems = [
     product: "Shirt (Black)",
     price: "$30.00",
     modelImg: popsicleShirtBlackModel,
+    nav: "/store/shirt-black",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 8,
@@ -82,6 +103,9 @@ export const storeItems = [
     product: "Shirt (Blue)",
     price: "$30.00",
     modelImg: "",
+    nav: "/store/shirt-blue",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 9,
@@ -89,6 +113,9 @@ export const storeItems = [
     product: "Crewneck (Navy Blue)",
     price: "$45.00",
     modelImg: "",
+    nav: "/store/crewneck-navy-blue",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 10,
@@ -96,6 +123,9 @@ export const storeItems = [
     product: "Crewneck (Grey)",
     price: "$45.00",
     modelImg: "",
+    nav: "/store/crewneck-grey",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 11,
@@ -103,6 +133,9 @@ export const storeItems = [
     product: "Colorful Hoodie (Blue)",
     price: "$70.00",
     modelImg: colorfulHoodieBlueModel,
+    nav: "/store/colorfulhoodie-blue",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 12,
@@ -110,6 +143,9 @@ export const storeItems = [
     product: "Colorful Hoodie (Red)",
     price: "$70.00",
     modelImg: colorfulHoodieRedModel,
+    nav: "/store/colorfulhoodie-red",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 13,
@@ -117,6 +153,9 @@ export const storeItems = [
     product: "Colorful Hoodie (Yellow)",
     price: "$70.00",
     modelImg: colorfulHoodieYellowModel,
+    nav: "/store/colorfulhoodie-yellow",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 14,
@@ -124,6 +163,9 @@ export const storeItems = [
     product: "Shorts",
     price: "$35.00",
     modelImg: "",
+    nav: "/store/shorts",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
 
   {
@@ -132,6 +174,9 @@ export const storeItems = [
     product: "Pillow",
     price: "$20.00",
     modelImg: "",
+    nav: "/store/pillow",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 16,
@@ -139,6 +184,9 @@ export const storeItems = [
     product: "Hat",
     price: "$15.00",
     modelImg: "",
+    nav: "/store/hat",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 17,
@@ -146,12 +194,18 @@ export const storeItems = [
     product: "Tote (Black)",
     price: "$25.00",
     modelImg: toteBlackModel,
+    nav: "/store/tote-black",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
   {
     id: 18,
     img: toteWhite,
-    product: "Tote (Black)",
+    product: "Tote (White)",
     price: "$25.00",
     modelImg: toteWhiteModel,
+    nav: "/store/tote-white",
+    sizing: "Fits True to Size",
+    care: "Machine wash cold, hang dry for increased longevity",
   },
 ];

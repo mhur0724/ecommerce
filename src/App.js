@@ -10,6 +10,8 @@ import FAQ from "./components/FAQPage/FAQ";
 import Footer from "./components/Footer";
 import Product from "./ProductPage/Product";
 import { bestSellers } from "./components/data";
+import { storeItems } from "./StorePage/components/StoreData";
+import StoreItemPage from "./StorePage/components/StoreItemPage";
 
 function App() {
   return (
@@ -21,6 +23,22 @@ function App() {
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/store" element={<Store />} />
+            {storeItems.map((product) => (
+              <Route
+                key={product.id}
+                path={product.nav}
+                element={
+                  <StoreItemPage
+                    key={product.id}
+                    img={product.img}
+                    product={product.product}
+                    price={product.price}
+                    sizing={product.sizing}
+                    care={product.care}
+                  />
+                }
+              />
+            ))}
             {bestSellers.map((product) => (
               <Route
                 key={product.id}
@@ -37,7 +55,6 @@ function App() {
                 }
               />
             ))}
-            {/* <Route path="/product/:id" element={<Product />} /> */}
             <Route path="/graphics" element={<Graphics />} />
             <Route path="/lookbook" element={<LookBook />} />
             <Route path="/FAQ" element={<FAQ />} />
