@@ -1,4 +1,5 @@
 import "./App.css";
+import { useState } from "react";
 import Home from "./components/Home";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -12,13 +13,15 @@ import Product from "./ProductPage/Product";
 import { bestSellers } from "./components/data";
 import { storeItems } from "./StorePage/components/StoreData";
 import StoreItemPage from "./StorePage/components/StoreItemPage";
+import Cart from "./CartPage/Cart";
 
 function App() {
+  const [cartCount, setCartCount] = useState(0);
   return (
     <HashRouter basename="/">
       <div className="App">
         <Announcement />
-        <Navbar />
+        <Navbar cartCount={cartCount} setCartCount={setCartCount} />
         <div className="content">
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -35,6 +38,8 @@ function App() {
                     price={product.price}
                     sizing={product.sizing}
                     care={product.care}
+                    setCartCount={setCartCount}
+                    cartCount={cartCount}
                   />
                 }
               />
@@ -58,6 +63,12 @@ function App() {
             <Route path="/graphics" element={<Graphics />} />
             <Route path="/lookbook" element={<LookBook />} />
             <Route path="/FAQ" element={<FAQ />} />
+            <Route
+              path="/cart"
+              element={
+                <Cart cartCount={cartCount} setCartCount={setCartCount} />
+              }
+            />
           </Routes>
         </div>
         <Footer />

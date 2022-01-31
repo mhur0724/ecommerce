@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import classes from "./StoreItemPage.module.css";
-const StoreItemPage = ({ img, product, price, sizing, care }) => {
+const StoreItemPage = ({
+  img,
+  product,
+  price,
+  sizing,
+  care,
+  setCartCount,
+  cartCount,
+}) => {
   const [qty, setQty] = useState(1);
 
   const sizeChangeHandler = (e) => {
@@ -17,6 +25,10 @@ const StoreItemPage = ({ img, product, price, sizing, care }) => {
 
   const decrement = () => {
     setQty((prevState) => prevState - 1);
+  };
+
+  const addToCart = () => {
+    setCartCount((prevState) => prevState + 1);
   };
 
   return (
@@ -73,7 +85,9 @@ const StoreItemPage = ({ img, product, price, sizing, care }) => {
             />
           </div>
         </div>
-        <button className={classes["cart-button"]}>Add to Cart</button>
+        <button className={classes["cart-button"]} onClick={addToCart}>
+          Add to Cart
+        </button>
       </div>
     </div>
   );
