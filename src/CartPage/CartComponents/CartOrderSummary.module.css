@@ -1,0 +1,20 @@
+.CartOrderSummary {
+  width: 600px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.CartOrderSummary > * {
+  margin-top: 1rem;
+}
+
+.CartOrderSummary div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

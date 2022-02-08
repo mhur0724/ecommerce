@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import classes from "./StoreItemPage.module.css";
 const StoreItemPage = ({
   img,
@@ -10,9 +10,11 @@ const StoreItemPage = ({
   cartCount,
 }) => {
   const [qty, setQty] = useState(1);
+  const amountInputRef = useRef();
+  const sizeRef = useRef();
 
   const sizeChangeHandler = (e) => {
-    console.log(e.target.value);
+    const size = sizeRef.current.value;
   };
 
   const inputChangeHandler = (e) => {
@@ -24,11 +26,14 @@ const StoreItemPage = ({
   };
 
   const decrement = () => {
-    setQty((prevState) => prevState - 1);
+    if (qty > 0) {
+      setQty((prevState) => prevState - 1);
+    }
   };
 
-  const addToCart = () => {
-    setCartCount((prevState) => prevState + 1);
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const enteredAmount = +amountInputRef.current.value;
   };
 
   return (
@@ -47,7 +52,12 @@ const StoreItemPage = ({
         </div>
         <div className={classes.size}>
           <label htmlFor="sizes">Size</label>
-          <select name="sizes" id="sizes" onChange={sizeChangeHandler}>
+          <select
+            ref={sizeRef}
+            name="sizes"
+            id="sizes"
+            onChange={sizeChangeHandler}
+          >
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -57,37 +67,35 @@ const StoreItemPage = ({
         </div>
         <div>
           <div className={`${classes.quantity} ${classes["buttons_added"]}`}>
-            <input
-              type="button"
-              onClick={decrement}
-              value="-"
-              className={classes.minus}
-            />
-            <input
-              type="number"
-              step="1"
-              min="1"
-              max=""
-              name="quantity"
-              value={qty}
-              title="Qty"
-              className={`${classes["input-text"]} ${classes["qty"]} ${classes.text}`}
-              size="4"
-              pattern=""
-              inputMode=""
-              onChange={inputChangeHandler}
-            />
-            <input
-              type="button"
-              onClick={increment}
-              value="+"
-              className={classes.plus}
-            />
+            <form action="" onSubmit={submitHandler}>
+              <input
+                type="button"
+                onClick={decrement}
+                value="-"
+                className={classes.minus}
+              />
+              <input
+                ref={amountInputRef}
+                type="number"
+                name="quantity"
+                value={qty}
+                title="Qty"
+                className={`${classes["input-text"]} ${classes["qty"]} ${classes.text}`}
+                size="4"
+                pattern=""
+                inputMode=""
+                onChange={inputChangeHandler}
+              />
+              <input
+                type="button"
+                onClick={increment}
+                value="+"
+                className={classes.plus}
+              />
+              <input type="submit" value="Add to cart" />
+            </form>
           </div>
         </div>
-        <button className={classes["cart-button"]} onClick={addToCart}>
-          Add to Cart
-        </button>
       </div>
     </div>
   );
