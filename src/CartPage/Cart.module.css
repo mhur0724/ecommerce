@@ -1,0 +1,32 @@
+.cart {
+  display: flex;
+}
+.cartItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem img {
+  height: 200px;
+}
+
+.cartItem ul {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  width: 500px;
+}
+
+.cartItem ul li {
+  flex: 1;
+  list-style: none;
+}
+
+.amount {
+  width: 2rem;
+}
+
+.cartItem ul li button {
+  width: 2rem;
+}

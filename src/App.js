@@ -16,8 +16,6 @@ import StoreItemPage from "./StorePage/components/StoreItemPage";
 import Cart from "./CartPage/Cart";
 import CartProvider from "./CartPage/CartProvider";
 
-// testing
-
 function App() {
   const [cartCount, setCartCount] = useState(0);
   return (
@@ -38,6 +36,7 @@ function App() {
                     <StoreItemPage
                       key={product.id}
                       img={product.img}
+                      id={product.id}
                       product={product.product}
                       price={product.price}
                       sizing={product.sizing}
