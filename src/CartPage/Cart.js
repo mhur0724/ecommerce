@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-import classes from "./Cart.module.css";
-import CartOrderSummary from "./CartComponents/CartOrderSummary";
-import CartItem from "./CartComponents/CartItem";
-const Cart = () => {
-  return (
-    <div className={classes.Cart}>
-      <div className={classes.cartbuttons}>
-        <button>Continue Shopping</button>
-        <button>Check Out</button>
-      </div>
-
-      <div className={classes.cartContent}>
-        <CartItem />
-        <CartOrderSummary />
-=======
 import React, { useContext, useRef } from "react";
 import CartContext from "./cart-context";
 import classes from "./Cart.module.css";
@@ -58,7 +41,6 @@ const Cart = () => {
       <div>
         <span>Total Amount:</span> {totalAmount}
         <div>{hasItems && <button>Order</button>}</div>
->>>>>>> cart
       </div>
     </div>
   );

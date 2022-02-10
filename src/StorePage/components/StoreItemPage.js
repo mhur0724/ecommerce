@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useRef } from "react";
-import classes from "./StoreItemPage.module.css";
-const StoreItemPage = ({
-  img,
-  product,
-  price,
-  sizing,
-  care,
-  setCartCount,
-  cartCount,
-}) => {
-  const [qty, setQty] = useState(1);
-  const amountInputRef = useRef();
-  const sizeRef = useRef();
-
-  const sizeChangeHandler = (e) => {
-    const size = sizeRef.current.value;
-  };
-=======
 import React, { useState, useRef, useContext } from "react";
 import classes from "./StoreItemPage.module.css";
 import CartContext from "../../CartPage/cart-context";
@@ -27,7 +7,6 @@ const StoreItemPage = ({ id, img, product, price, sizing, care }) => {
   const amountInputRef = useRef();
   const sizeRef = useRef();
   const cartCtx = useContext(CartContext);
->>>>>>> cart
 
   const inputChangeHandler = (e) => {
     setQty(parseInt(e.target.value));
@@ -46,8 +25,6 @@ const StoreItemPage = ({ id, img, product, price, sizing, care }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     const enteredAmount = +amountInputRef.current.value;
-<<<<<<< HEAD
-=======
     console.log(id);
     cartCtx.addItem({
       id: id,
@@ -57,7 +34,6 @@ const StoreItemPage = ({ id, img, product, price, sizing, care }) => {
       amount: enteredAmount,
       size: sizeRef.current.value,
     });
->>>>>>> cart
   };
 
   return (
@@ -76,16 +52,7 @@ const StoreItemPage = ({ id, img, product, price, sizing, care }) => {
         </div>
         <div className={classes.size}>
           <label htmlFor="sizes">Size</label>
-<<<<<<< HEAD
-          <select
-            ref={sizeRef}
-            name="sizes"
-            id="sizes"
-            onChange={sizeChangeHandler}
-          >
-=======
           <select ref={sizeRef} name="sizes" id="sizes">
->>>>>>> cart
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>

@@ -1,29 +1,3 @@
-<<<<<<< HEAD
-.Cart {
-  display: flex;
-  flex-direction: column;
-  height: 50vh;
-  width: 100%;
-}
-
-.cartContent {
-  display: flex;
-}
-
-.cartbuttons {
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-}
-
-.Cart button {
-  cursor: pointer;
-  padding: 1rem 1rem;
-  border-radius: 3rem;
-  border: none;
-  background-color: #24a0ed;
-  color: white;
-=======
 .cart {
   display: flex;
 }
@@ -55,5 +29,4 @@
 
 .cartItem ul li button {
   width: 2rem;
->>>>>>> cart
 }
