@@ -36,6 +36,10 @@ function App() {
                     <StoreItemPage
                       key={product.id}
                       img={product.img}
+<<<<<<< HEAD
+=======
+                      id={product.id}
+>>>>>>> cart
                       product={product.product}
                       price={product.price}
                       sizing={product.sizing}
