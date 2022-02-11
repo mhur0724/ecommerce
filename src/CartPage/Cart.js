@@ -12,35 +12,61 @@ const Cart = () => {
   const cartItemAddHandler = (item) => {
     cartCtx.addItem({ ...item, amount: 1 });
   };
-  const changeSize = () => {
-    console.log();
-  };
+  if (!hasItems) {
+    return <div className={classes.cart}>Your cart is currently empty</div>;
+  }
   return (
     <div className={classes.cart}>
-      <div className={classes.cartItems}>
-        {cartCtx.items.map((item) => (
-          <div className={classes.cartItem}>
-            <img src={item.img} alt="" />
+      <div className={classes["cart__content"]}>
+        {hasItems && (
+          <div className={classes["cart__info"]}>
             <ul>
-              <li>{item.product}</li>
-              <li>Size: {item.size}</li>
-              <li>{`$${item.price}`}</li>
-              <li className={classes.amount}>Qty: {item.amount}</li>
-              <li>
-                <button onClick={cartItemRemoveHandler.bind(null, item.id)}>
-                  -
-                </button>
-              </li>
-              <li>
-                <button onClick={cartItemAddHandler.bind(null, item)}>+</button>
-              </li>
+              <li>Item</li>
+              <li>Description</li>
+              <li>QTY</li>
+              <li>Price</li>
             </ul>
           </div>
-        ))}
+        )}
+        <div className={classes["cart__items"]}>
+          {cartCtx.items.map((item) => (
+            <div className={classes["cart__item"]}>
+              <ul>
+                <li>
+                  <img src={item.img} alt="" />
+                </li>
+                <li>
+                  <div>
+                    <p>{item.product}</p>
+                    <p className={classes.size}>Size: {item.size}</p>
+                  </div>
+                </li>
+                <li className={classes.qty}>
+                  <div className={classes["qty__content"]}>
+                    <button onClick={cartItemRemoveHandler.bind(null, item.id)}>
+                      -
+                    </button>
+                    <p>{item.amount}</p>
+                    <button onClick={cartItemAddHandler.bind(null, item)}>
+                      +
+                    </button>
+                  </div>
+                </li>
+                <li>{`$${item.price * item.amount}`}</li>
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
-      <div>
-        <span>Total Amount:</span> {totalAmount}
-        <div>{hasItems && <button>Order</button>}</div>
+      <div className={classes.total}>
+        <div>
+          {hasItems && (
+            <div>
+              <p>Subtotal: {totalAmount} </p>
+              <button>CHECKOUT</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
