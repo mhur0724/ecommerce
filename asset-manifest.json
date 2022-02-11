@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/ecommerce/static/css/main.1a61767b.css",
-    "main.js": "/ecommerce/static/js/main.894b56e1.js",
+    "main.css": "/ecommerce/static/css/main.424f7759.css",
+    "main.js": "/ecommerce/static/js/main.e0e24fdd.js",
     "static/media/slide3background.png": "/ecommerce/static/media/slide3background.63f24d22c0fb4251fca5.png",
     "static/media/graphicsbackground.png": "/ecommerce/static/media/graphicsbackground.bb4b6995cf4c0616bfdb.png",
     "static/media/blue.png": "/ecommerce/static/media/blue.d7404ee94dbce2edbe04.png",
@@ -61,11 +61,11 @@
     "static/media/13.jpg": "/ecommerce/static/media/13.0d45fa46f455d3fada6c.jpg",
     "static/media/shirt-black.jpg": "/ecommerce/static/media/shirt-black.d502607f10ebfb2d4212.jpg",
     "index.html": "/ecommerce/index.html",
-    "main.1a61767b.css.map": "/ecommerce/static/css/main.1a61767b.css.map",
-    "main.894b56e1.js.map": "/ecommerce/static/js/main.894b56e1.js.map"
+    "main.424f7759.css.map": "/ecommerce/static/css/main.424f7759.css.map",
+    "main.e0e24fdd.js.map": "/ecommerce/static/js/main.e0e24fdd.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a61767b.css",
-    "static/js/main.894b56e1.js"
+    "static/css/main.424f7759.css",
+    "static/js/main.e0e24fdd.js"
   ]
 }
