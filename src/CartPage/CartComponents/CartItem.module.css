@@ -1,0 +1,37 @@
+.CartItem {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  padding: 1rem;
+  width: 100%;
+}
+
+.cartItem > * {
+  margin-left: 2rem;
+  border: 1px solid black;
+}
+.cartItem img {
+  width: 25%;
+  height: auto;
+}
+
+.cartItem ul {
+  width: 50%;
+  text-align: left;
+}
+
+.cartItem li {
+  list-style-type: none;
+}
+
+.cartItem input {
+  width: 50px;
+}
+
+.deleteButton {
+}
